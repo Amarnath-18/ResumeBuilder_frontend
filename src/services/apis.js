@@ -1,7 +1,10 @@
 import axios from 'axios';
 
+// Use environment variable or fallback to production URL
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://resumebuilder-backend-yy95.onrender.com/api';
+
 const API = axios.create({
-  baseURL: 'https://resumebuilder-backend-yy95.onrender.com/api',
+  baseURL: API_BASE_URL,
   headers: {
     'Content-Type': 'application/json',
   },
