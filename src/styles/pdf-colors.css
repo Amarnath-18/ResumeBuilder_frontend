@@ -1,0 +1,97 @@
+/* PDF-safe color overrides to prevent oklch errors */
+/* These styles force hex colors instead of oklch for PDF generation */
+
+.pdf-optimized,
+.pdf-optimized * {
+  /* Text colors */
+  --color-blue-600: #2563eb;
+  --color-blue-500: #3b82f6;
+  --color-gray-900: #111827;
+  --color-gray-800: #1f2937;
+  --color-gray-700: #374151;
+  --color-gray-600: #4b5563;
+  --color-gray-500: #6b7280;
+  --color-gray-400: #9ca3af;
+  --color-emerald-600: #059669;
+  --color-emerald-500: #10b981;
+  --color-purple-600: #7c3aed;
+  --color-purple-500: #8b5cf6;
+  --color-red-600: #dc2626;
+  --color-red-500: #ef4444;
+  --color-orange-600: #ea580c;
+  --color-orange-500: #f97316;
+  --color-teal-600: #0d9488;
+  --color-teal-500: #14b8a6;
+}
+
+/* Force specific color classes for PDF */
+.pdf-optimized .text-blue-600 { color: #2563eb !important; }
+.pdf-optimized .text-blue-500 { color: #3b82f6 !important; }
+.pdf-optimized .text-gray-900 { color: #111827 !important; }
+.pdf-optimized .text-gray-800 { color: #1f2937 !important; }
+.pdf-optimized .text-gray-700 { color: #374151 !important; }
+.pdf-optimized .text-gray-600 { color: #4b5563 !important; }
+.pdf-optimized .text-gray-500 { color: #6b7280 !important; }
+.pdf-optimized .text-gray-400 { color: #9ca3af !important; }
+.pdf-optimized .text-emerald-600 { color: #059669 !important; }
+.pdf-optimized .text-emerald-500 { color: #10b981 !important; }
+.pdf-optimized .text-purple-600 { color: #7c3aed !important; }
+.pdf-optimized .text-purple-500 { color: #8b5cf6 !important; }
+.pdf-optimized .text-red-600 { color: #dc2626 !important; }
+.pdf-optimized .text-red-500 { color: #ef4444 !important; }
+.pdf-optimized .text-orange-600 { color: #ea580c !important; }
+.pdf-optimized .text-orange-500 { color: #f97316 !important; }
+.pdf-optimized .text-teal-600 { color: #0d9488 !important; }
+.pdf-optimized .text-teal-500 { color: #14b8a6 !important; }
+
+/* Border colors */
+.pdf-optimized .border-blue-600 { border-color: #2563eb !important; }
+.pdf-optimized .border-blue-500 { border-color: #3b82f6 !important; }
+.pdf-optimized .border-gray-300 { border-color: #d1d5db !important; }
+.pdf-optimized .border-gray-200 { border-color: #e5e7eb !important; }
+
+/* Background colors */
+.pdf-optimized .bg-blue-600 { background-color: #2563eb !important; }
+.pdf-optimized .bg-blue-500 { background-color: #3b82f6 !important; }
+.pdf-optimized .bg-blue-50 { background-color: #eff6ff !important; }
+.pdf-optimized .bg-gray-50 { background-color: #f9fafb !important; }
+.pdf-optimized .bg-gray-100 { background-color: #f3f4f6 !important; }
+.pdf-optimized .bg-emerald-50 { background-color: #ecfdf5 !important; }
+.pdf-optimized .bg-purple-50 { background-color: #faf5ff !important; }
+.pdf-optimized .bg-red-50 { background-color: #fef2f2 !important; }
+.pdf-optimized .bg-orange-50 { background-color: #fff7ed !important; }
+.pdf-optimized .bg-teal-50 { background-color: #f0fdfa !important; }
+
+/* Additional overrides for common patterns */
+.pdf-optimized [class*="text-blue"] { color: #2563eb !important; }
+.pdf-optimized [class*="text-gray"] { color: #374151 !important; }
+.pdf-optimized [class*="border-blue"] { border-color: #2563eb !important; }
+.pdf-optimized [class*="bg-blue"] { background-color: #eff6ff !important; }
+
+/* PDF-specific optimizations for better content fit */
+.pdf-optimized {
+  max-width: none !important;
+  width: 100% !important;
+}
+
+.pdf-optimized .container,
+.pdf-optimized .max-w-4xl,
+.pdf-optimized .max-w-3xl,
+.pdf-optimized .max-w-2xl,
+.pdf-optimized .max-w-xl {
+  max-width: none !important;
+  width: 100% !important;
+}
+
+/* Optimize spacing for PDF */
+.pdf-optimized .space-y-6 > * + * {
+  margin-top: 1rem !important;
+}
+
+.pdf-optimized .space-y-4 > * + * {
+  margin-top: 0.75rem !important;
+}
+
+.pdf-optimized .space-y-2 > * + * {
+  margin-top: 0.5rem !important;
+}
