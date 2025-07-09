@@ -29,9 +29,8 @@ const ResumeViewer = () => {
             toast.info('📄 Public resume loaded successfully');
             return;
           }
-        } catch (publicError) {
+        } catch {
           // If public fetch fails, try authenticated fetch (for owner access)
-          console.log('Public access failed:', publicError.message);
           if (user) {
             try {
               const authResponse = await API.get(`/resume/get-resume/${resumeId}`);

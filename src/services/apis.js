@@ -15,8 +15,7 @@ export const checkAuthStatus = async () => {
   try {
     const response = await API.get('/auth/current-user');
     return response.data;
-  } catch (error) {
-    console.log(error);
+  } catch {
     return null;
   }
 };

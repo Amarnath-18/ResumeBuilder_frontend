@@ -52,7 +52,6 @@ const EducationForm = () => {
     setShowAddForm(true);
   };
 
-  console.log("rendered in edu");
   return (
     <div className="max-w-4xl mx-auto p-6">
       <div className="flex justify-between items-center mb-6">

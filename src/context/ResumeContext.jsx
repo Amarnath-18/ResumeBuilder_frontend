@@ -116,7 +116,6 @@ const ResumeProvider = ({children})=>{
                 localStorage.setItem('resumeProjects', JSON.stringify(projects));
                 localStorage.setItem('resumeCertifications', JSON.stringify(certifications));
                 localStorage.setItem('resumeTemplate', JSON.stringify(currentTemplate));
-                console.log('Resume data saved to localStorage');
                 return true;
             } catch (error) {
                 console.error('Error saving to localStorage:', error);

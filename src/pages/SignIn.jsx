@@ -32,7 +32,6 @@ const SignIn = () => {
       navigate("/");
     } catch (error) {
       toast.error(error.response?.data?.message || error.response?.data || error.message || "Sign in failed");
-      console.log('Sign in error:', error.response?.data || error.message);
     }
   }
 

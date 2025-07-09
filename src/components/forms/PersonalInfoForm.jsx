@@ -29,7 +29,6 @@ const PersonalInfoForm = () => {
 
   const onSubmit = (data) => {
     setPersonalInfo(data);
-    console.log("Personal Info Form Data:", data);
   };
 
   return (

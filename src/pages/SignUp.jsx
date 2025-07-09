@@ -44,7 +44,6 @@ const SignUp = () => {
       toast.success("Registation SuccessFul Please Login")
       navigate("/signin")
     } catch (error) {
-      console.log(error);
       toast.error(error.response?.data?.message);
     }
   }

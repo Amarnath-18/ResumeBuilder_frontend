@@ -100,11 +100,6 @@ const FinalStep = () => {
         theme: "professional"
       };
 
-      // Debug logging
-      console.log('Sending resume data:', resumeDataToSend);
-      console.log('Resume data keys:', Object.keys(resumeDataToSend));
-      console.log('Resume data size:', JSON.stringify(resumeDataToSend).length);
-
       const response = await createResume({
         resumeData: resumeDataToSend
       });

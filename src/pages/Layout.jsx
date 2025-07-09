@@ -10,7 +10,6 @@ const Layout = () => {
   useEffect(() => {
     const initAuth = async () => {
       const User = await checkAuthStatus();
-      console.log(User);
       if (User) {
         setUser(User)
       } else {
